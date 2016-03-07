@@ -4,18 +4,50 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
-
-    <%= stylesheet_link_tag    "application" %>
+    <title><%= content_for?(:title) ? yield(:title) : "Caroline Benn // Full Stack Web Developer" %></title>
     <%= stylesheet_link_tag    "pushy", media: "all" %>
+    <%= stylesheet_link_tag    "application" %>
+
     <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "jquery.min.js" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
     <%= csrf_meta_tags %>
   </head>
 
   <body>
+    <div class="show-for-large-up">
+      <nav>
+        <h1>Caroline</h1>
+      </nav>
+    </div>
+
+    <div class="hide-for-large-up">
+      <nav class="pushy pushy-left">
+        <ul>
+          <li class="pushy-link"><a href="#">Home</a></li>
+          <li class="pushy-link"><a href="#">Web Development</a></li>
+          <li class="pushy-link"><a href="#">Web Design</a></li>
+          <li class="pushy-link"><a href="#">About</a></li>
+          <li class="pushy-link"><a href="#">Contact</a></li>
+          <span>
+            <li class="social-links">
+              <a href="http://www.twitter.com/caroline_benn" target="_blank"><i class="fa fa-twitter"></i></a><a href="http://www.instagram.com/caroline_benn" target="_blank"><i class="fa fa-instagram"></i></a><a href="http://www.github.com/carolinebenn" target="_blank"><i class="fa fa-github-square"></i></a><a href="https://www.linkedin.com/in/carolinebenn" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+              </li>
+          </span>
+        </ul>
+      </nav>
+    
+      <div class="site-overlay"></div>
+
+      <div id="container">
+        <div class="menu-btn"><i class="fa fa-bars"></i></div>
+      </div>
+    </div>
 
     <%= yield %>
 
+    <%= javascript_include_tag "pushy.min.js" %>
   </body>
 </html>

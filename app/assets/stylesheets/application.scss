@@ -15,3 +15,121 @@
  //= require foundation_and_overrides
 
  */
+
+
+
+body {
+  background: #efefef;
+}
+
+#container {
+  background: orange;
+  padding: 1em;
+}
+
+ul {
+  margin-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+i.fa.fa-bars {
+  cursor: pointer;
+}
+
+
+/* Pushy menu */
+
+.pushy.pushy-open {
+  box-shadow: none;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#333333+0,333333+68,e02a80+100 */
+  background: rgb(51,51,51);
+  background: -moz-linear-gradient(top,  rgba(51,51,51,1) 0%, rgba(51,51,51,1) 68%, rgba(224,42,128,1) 100%); 
+  background: -webkit-linear-gradient(top,  rgba(51,51,51,1) 0%,rgba(51,51,51,1) 68%,rgba(224,42,128,1) 100%);
+  background: linear-gradient(to bottom,  rgba(51,51,51,1) 0%,rgba(51,51,51,1) 68%,rgba(224,42,128,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#e02a80',GradientType=0 ); 
+}
+
+.pushy a {
+  border-top: none;
+  border-bottom: none;
+  color: #E0E0DE;
+}
+
+.pushy a:hover  {
+  color: #ffa518;
+  background: transparent;
+}
+
+.pushy h6 {
+  padding: 15px 15px 0px 30px;
+  color: #777;
+  font-size: 0.75em;
+}
+
+.pushy span {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.pushy span li {
+  display: inline;
+}
+
+.pushy span a {
+  display: inline-block;
+  padding: 10px 15px;
+}
+
+.pushy span a:hover i {
+  color: #e02a80;
+}
+
+
+/* Pushy Gradients */
+
+.pushy li:nth-child(1) a:hover {
+  color: #ffa518;
+}
+
+.pushy li:nth-child(2) a:hover {
+  color: #fb9526;
+}
+
+.pushy li:nth-child(3) a:hover {
+  color: #f68137;
+}
+
+.pushy li:nth-child(4) a:hover {
+  color: #f0694a;
+}
+
+.pushy li:nth-child(5) a:hover {
+  color: #ea525e;
+}
+
+.pushy li:nth-child(6) a:hover {
+  color: #e53c71;
+}
+
+.pushy-active .site-overlay {
+  background-color: rgba(70, 50, 50, 0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
