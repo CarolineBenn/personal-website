@@ -1,31 +1,46 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- //= require foundation_and_overrides
 
- */
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,700);
 
+@import "pushy";
+@import "foundation_and_overrides";
 
 
 body {
-  background: #efefef;
+  background: #fff;
 }
 
 #container {
-  background: orange;
-  padding: 1em;
+  background: transparent;
+  padding: 10px;
+  color: white;
+
 }
+
+#container h1 {
+  margin: 0;
+  font-size: 2em;
+  text-transform: uppercase;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 640px){
+  #container h1 {
+    font-size: 1.7em;
+  }
+}
+
+
+.row.header a {
+  color: white;
+}
+
+.row.header a:hover, a:active, a:focus {
+  color: #ffa518;
+}
+
 
 ul {
   margin-left: 0;
@@ -37,8 +52,31 @@ li {
 
 i.fa.fa-bars {
   cursor: pointer;
+  color: white;
+  font-size: 1.7em;
+  position: relative;
+  top: 5px;
 }
 
+i.fa.fa-bars:hover, {
+  color: orange;
+}
+
+
+.vertical-align {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.one-hundred {
+  width: 100%;
+}
+
+
+h2.modal-title {
+  color: #666;
+}
 
 /* Pushy menu */
 
@@ -90,39 +128,327 @@ i.fa.fa-bars {
 
 /* Pushy Gradients */
 
-.pushy li:nth-child(1) a:hover {
-  color: #ffa518;
-}
-
-.pushy li:nth-child(2) a:hover {
-  color: #fb9526;
-}
-
-.pushy li:nth-child(3) a:hover {
-  color: #f68137;
-}
-
-.pushy li:nth-child(4) a:hover {
-  color: #f0694a;
-}
-
-.pushy li:nth-child(5) a:hover {
-  color: #ea525e;
-}
-
-.pushy li:nth-child(6) a:hover {
-  color: #e53c71;
-}
+.pushy li:nth-child(1) a:hover { color: #ffa518; }
+.pushy li:nth-child(2) a:hover { color: #fb9526; }
+.pushy li:nth-child(3) a:hover { color: #f68137; }
+.pushy li:nth-child(4) a:hover { color: #f0694a; }
+.pushy li:nth-child(5) a:hover { color: #ea525e; }
+.pushy li:nth-child(6) a:hover { color: #e53c71; }
 
 .pushy-active .site-overlay {
   background-color: rgba(70, 50, 50, 0.5);
 }
 
+.row.header {
+  width: 100%;
+  margin: 0;
+  max-width: 100%;
+}
+
+
+nav.navigation {
+  background: transparent;
+  text-transform: uppercase;
+  font-family: 'Quicksand', sans-serif;
+}
+
+nav.navigation h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 2em;
+  padding: 10px 20px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  color: white;
+}
+
+nav.navigation ul {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  float: right;
+}
+
+nav.navigation ul li {
+  display: inline-block;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.section-header h3 {
+  text-align: center;
+}
+
+/* Intro */
+
+section#intro {
+  /* background-image: asset-data-url('discoball.gif'); */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffa518+0,e02a80+100 */
+  background: rgb(255,165,24); /* Old browsers */
+  background: -moz-linear-gradient(45deg,  rgba(255,165,24,1) 0%, rgba(224,42,128,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg,  rgba(255,165,24,1) 0%,rgba(224,42,128,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg,  rgba(255,165,24,1) 0%,rgba(224,42,128,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa518', endColorstr='#e02a80',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+  background-size: cover;
+  background-position: center center;
+  height: 400px;
+  position: relative;
+  top: -65px;
+  padding-top: 65px;
+  padding-bottom: 65px;
+  z-index: -1;
+}
+
+section#intro h1, h2, h3, h4, h5, h6 {
+  color: white;
+  text-align: center;
+}
+
+/* Web developement */
+
+section#web-development {
+  background: #fff;
+  padding-bottom: 3em;
+}
+
+.row.projects {
+  margin-bottom: 2em;
+}
+
+.row.projects img {
+  box-shadow: 4px 5px 6px rgba(30, 30, 30, 0.2), 2px 2px 2px rgba(10,10,10,0.2);
+}
+
+@media (max-width: 640px){
+  .row.projects {
+    margin-bottom: 0em;
+  }
+  .row.projects img {
+    margin-bottom: 1em;
+  }
+}
+
+/* Web design */
+
+// jeannieshapiro.com
+// Bell Eames
+// Medlist
+// Melissa Benn
+// A Health Matter
+
+section#web-design {
+  padding-top: 3em;
+  padding-bottom: 3em;
+  background: #aaa;
+}
+
+/* Footer */
+
+footer {
+  background: #333;
+  color: #eee;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+footer p {
+  margin-bottom: 0;
+}
+
+footer p.copyright {
+  color: #666;
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+
+footer a {
+  color: #eee;
+}
+
+footer a:hover, a:active, a:focus {
+  color: #ea525e;
+}
+
+footer ul li {
+  display: inline-block;
+  float: right;
+}
+
+footer ul li a {
+  padding: 5px 10px;
+  color: #eee;
+}
+
+footer ul li a:hover {
+  color: #ea525e;
+}
 
 
 
 
+/* Overlay */
 
+/* ============================================================
+  GLOBAL
+============================================================ */
+.effects {
+  padding-left: 15px;
+}
+.effects .img {
+  position: relative;
+  float: left;
+  margin-bottom: 5px;
+  overflow: hidden;
+}
+.effects .img:nth-child(n) {
+  margin-right: 5px;
+}
+.effects .img:first-child {
+  margin-left: -15px;
+}
+.effects .img:last-child {
+  margin-right: 0;
+}
+.effects .img img {
+  display: block;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+.overlay {
+  display: block;
+  position: absolute;
+  z-index: 20;
+  /* background: rgba(0, 0, 0, 0.8); */
+  background: rgba(234, 82, 94, 0.65);
+  overflow: hidden;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+a.close-overlay {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 45px;
+  text-align: center;
+  background-color: #000;
+  cursor: pointer;
+}
+a.close-overlay.hidden {
+  display: none;
+}
+
+a.expand {
+  display: block;
+  position: absolute;
+  z-index: 100;
+  width: 60px;
+  height: 60px;
+  border: solid 5px #fff;
+  text-align: center;
+  color: #fff;
+  line-height: 50px;
+  font-weight: 700;
+  font-size: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  border-radius: 30px;
+}
+
+/* ============================================================
+  EFFECT 6 - ICON BOUNCE IN
+============================================================ */
+#effect .overlay {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+}
+#effect .overlay a.expand {
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0 auto;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+#effect .img.hover .overlay {
+  opacity: 1;
+}
+#effect .img.hover .overlay a.expand {
+  top: 50%;
+  margin-top: -30px;
+  opacity: 1;
+}
+
+/* ------------------------------------------------------------ *\
+|* ------------------------------------------------------------ *|
+|* Media Queries
+|* ------------------------------------------------------------ *|
+\* ------------------------------------------------------------ */
+@media only screen and (max-width: 1100px) {
+  .effects {
+    padding-left: 5px;
+  }
+
+  .effects .img:nth-child(n) {
+    margin-right: 5px;
+  }
+  .effects .img:first-child {
+    margin-left: 0;
+  }
+  .effects .img:nth-child(2n-1) {
+    margin-left: -5px;
+  }
+  .effects .img:nth-child(2n) {
+    margin-right: 0;
+  }
+  .effects .img:last-child {
+    margin-right: 0;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .effects .img {
+    width: 100%;
+  }
+  .effects .img:nth-child(n) {
+    margin-right: 0;
+  }
+  .effects .img:first-child {
+    margin-left: 0;
+  }
+  .effects .img:nth-child(2n-1) {
+    margin-left: 0;
+  }
+  .effects .img:nth-child(2n) {
+    margin-right: 0;
+  }
+  .effects .img:last-child {
+    margin-right: 0;
+  }
+  .effects .img img {
+    margin: 0 auto;
+  }
+}
 
 
 

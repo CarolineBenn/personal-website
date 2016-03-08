@@ -5,21 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title><%= content_for?(:title) ? yield(:title) : "Caroline Benn // Full Stack Web Developer" %></title>
-    <%= stylesheet_link_tag    "pushy", media: "all" %>
-    <%= stylesheet_link_tag    "application" %>
-
-    <%= javascript_include_tag "vendor/modernizr" %>
-    <%= javascript_include_tag "jquery.min.js" %>
-    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
+    <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Raleway:700,400' %>
+    
+    <%= javascript_include_tag "vendor/modernizr" %>    
+    <%= javascript_include_tag "application" %>
+    
     <%= csrf_meta_tags %>
   </head>
 
   <body>
     <div class="show-for-large-up">
-      <nav>
-        <h1>Caroline</h1>
+      <nav class="navigation">
+      <div class="row header" data-equalizer>
+        <div class="medium-4 columns" data-equalizer-watch>
+          <h1>Caroline Benn</h1>
+        </div>
+        <div class="medium-8 columns navbar-menu" data-equalizer-watch>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
       </nav>
     </div>
 
@@ -42,12 +53,21 @@
       <div class="site-overlay"></div>
 
       <div id="container">
-        <div class="menu-btn"><i class="fa fa-bars"></i></div>
-      </div>
-    </div>
+        <div class="row">
+          <div class="small-2 columns">
+            <div class="menu-btn"><i class="fa fa-bars"></i></div>
+          </div>
+          <div class="small-8 columns">
+            <h1>Caroline Benn</h1>
+          </div>
+          <div class="small-2 columns">
+            &nbsp;
+          </div>
+        </div>        
+      </div>  
+    </div>    <!-- End of .hide-for-large-up -->
 
-    <%= yield %>
+    <%= yield %>  
 
-    <%= javascript_include_tag "pushy.min.js" %>
   </body>
 </html>
