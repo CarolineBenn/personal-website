@@ -1,6 +1,5 @@
 
 @import url(https://fonts.googleapis.com/css?family=Quicksand:400,700);
-
 @import "pushy";
 @import "foundation_and_overrides";
 
@@ -14,6 +13,10 @@ body {
   padding: 10px;
   color: white;
 
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Quicksand', sans-serif;
 }
 
 #container h1 {
@@ -73,9 +76,58 @@ i.fa.fa-bars:hover, {
   width: 100%;
 }
 
+.centered {
+  display: block;
+  margin: 0 auto;
+}
+
+.links-centered {
+  text-align: center;
+}
 
 h2.modal-title {
   color: #666;
+}
+
+a.lead {
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+  color: #e02a80;
+  margin-bottom: 1em;
+}
+
+a.lead:hover {
+  color: #ffa518
+}
+.reveal-modal {
+  background: rgb(255,165,24);
+  background: -moz-linear-gradient(45deg,  rgba(255,165,24,1) 0%, rgba(224,42,128,1) 100%);
+  background: -webkit-linear-gradient(45deg,  rgba(255,165,24,1) 0%,rgba(224,42,128,1) 100%); 
+  background: linear-gradient(45deg,  rgba(255,165,24,1) 0%,rgba(224,42,128,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa518', endColorstr='#e02a80',GradientType=1 );
+
+  color: white;
+}
+
+.reveal-modal h2 {
+  color: white;
+}
+
+.reveal-modal a.lead {
+  color: #FFC674;
+}
+
+.reveal-modal a.lead:hover {
+  color: #ffa518;
+}
+
+.reveal-modal a.close-reveal-modal {
+  color: #ffa518;
+}
+
+.reveal-modal a.close-reveal-modal:hover {
+  color: #EF644E;
 }
 
 /* Pushy menu */
@@ -175,6 +227,12 @@ nav.navigation ul li {
   padding-right: 1em;
 }
 
+
+.row.section-header {
+  margin-bottom: 3em;
+  text-transform: uppercase;
+}
+
 .section-header h3 {
   text-align: center;
 }
@@ -184,11 +242,11 @@ nav.navigation ul li {
 section#intro {
   /* background-image: asset-data-url('discoball.gif'); */
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffa518+0,e02a80+100 */
-  background: rgb(255,165,24); /* Old browsers */
-  background: -moz-linear-gradient(45deg,  rgba(255,165,24,1) 0%, rgba(224,42,128,1) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(45deg,  rgba(255,165,24,1) 0%,rgba(224,42,128,1) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(45deg,  rgba(255,165,24,1) 0%,rgba(224,42,128,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa518', endColorstr='#e02a80',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background: rgb(255,165,24);
+  background: -moz-linear-gradient(45deg,  rgba(255,165,24,1) 0%, rgba(224,42,128,1) 100%);
+  background: -webkit-linear-gradient(45deg,  rgba(255,165,24,1) 0%,rgba(224,42,128,1) 100%); 
+  background: linear-gradient(45deg,  rgba(255,165,24,1) 0%,rgba(224,42,128,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa518', endColorstr='#e02a80',GradientType=1 );
 
   background-size: cover;
   background-position: center center;
@@ -212,6 +270,10 @@ section#web-development {
   padding-bottom: 3em;
 }
 
+section#web-development .row.section-header h3 {
+  color: #aaa;
+}
+
 .row.projects {
   margin-bottom: 2em;
 }
@@ -227,9 +289,31 @@ section#web-development {
   .row.projects img {
     margin-bottom: 1em;
   }
+  .row.projects .medium-6.columns {
+    margin-bottom: 1em; 
+  }
 }
 
 /* Web design */
+
+section#web-design .row.section-header h3 {
+  color: #444;
+}
+
+section#web-design .row.projects {
+  margin-bottom: 1em;
+}
+
+
+@media (max-width: 640px) {
+  section#web-design .row.projects {
+    margin-bottom: 0em;
+  }
+  section#web-design .row.projects .medium-4.columns {
+    margin-bottom: 1em; 
+  }
+}
+
 
 // jeannieshapiro.com
 // Bell Eames
@@ -240,7 +324,64 @@ section#web-development {
 section#web-design {
   padding-top: 3em;
   padding-bottom: 3em;
-  background: #aaa;
+  background: #dfdfdf;
+}
+
+/* About */
+
+section#about {
+  background: #F0694A;
+  color: white;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+section#about p {
+  text-align: justify;
+}
+
+/* Contact */
+section#contact {
+  background: #333;
+  color: #fbf5ed;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  text-align: center;
+}
+
+section#contact a {
+  color: #fbf5ed;
+}
+
+section#contact a.centered {
+  margin-bottom: 1em;
+}
+
+section#contact a:hover, a:active, a:focus {
+  color: #F0694A;
+}
+
+section#contact span {
+  color: #888;
+}
+
+section#contact span.text {
+  color: #fbf5ed;
+}
+
+/* Twitter */
+
+iframe {
+  width: 100% !important;
+}
+
+iframe > * {
+ width: 100% !important;
+ max-width: 100% !important; 
+}
+
+.timeline-Tweet-text {
+  color: #eee !important;
 }
 
 /* Footer */
@@ -323,7 +464,13 @@ footer ul li a:hover {
   position: absolute;
   z-index: 20;
   /* background: rgba(0, 0, 0, 0.8); */
-  background: rgba(234, 82, 94, 0.65);
+  /* background: rgba(234, 82, 94, 0.65); */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffa518+0,e02a80+100 */
+  background: rgb(255,165,24);
+  background: -moz-linear-gradient(45deg,  rgba(255,165,24,0.6) 0%, rgba(224,42,128,0.6) 100%);
+  background: -webkit-linear-gradient(45deg,  rgba(255,165,24,0.6) 0%,rgba(224,42,128,0.6) 100%); 
+  background: linear-gradient(45deg,  rgba(255,165,24,0.6) 0%,rgba(224,42,128,0.6) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa518', endColorstr='#e02a80',GradientType=1 );
   overflow: hidden;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
